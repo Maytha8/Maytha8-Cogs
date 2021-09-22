@@ -27,6 +27,7 @@ class api(commands.Cog):
     async def on_reaction_add(self, reaction, user):
         if reaction.message.id == 890366650703028305:
             await reaction.remove(user)
+            await user.send(reaction.emoji.id)
             await user.send("To verify, please complete this form: https://forms.gle/dPJnna9upwntBfMw7")
 
 # 887950654113464350/887951332915429376/890366650703028305
