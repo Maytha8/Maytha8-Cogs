@@ -17,7 +17,7 @@ class api(commands.Cog):
     async def verifinit(self, ctx):
         verifmsg = await self.bot.get_channel(887951332915429376).fetch_message(890366650703028305)
         await verifmsg.clear_reactions()
-        await verifmsg.add_reaction('890367558778245120')
+        await verifmsg.add_reaction('<:StoodVerif:890367558778245120>')
 
     @commands.Cog.listener()
     async def on_message(self, msg):
