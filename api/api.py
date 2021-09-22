@@ -19,10 +19,10 @@ class api(commands.Cog):
         await verifmsg.clear_reactions()
         await verifmsg.add_reaction('<:StoodVerif:890367558778245120>')
 
-    @commands.Cog.listener()
-    async def on_message(self, msg):
-        if msg.author.id != self.bot.user.id:
-            await msg.reply("Hi!")
+    # @commands.Cog.listener()
+    # async def on_message(self, msg):
+    #     if msg.author.id != self.bot.user.id:
+    #         await msg.reply("Hi!")
 
     @commands.Cog.listener()
     async def on_reaction_add(self, reaction, user):
