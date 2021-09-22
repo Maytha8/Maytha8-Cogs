@@ -15,4 +15,4 @@ class api(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, msg):
-        await msg.add_reaction(":HASS:")
+        await msg.add_reaction("smile")
