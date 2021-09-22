@@ -10,4 +10,4 @@ class RestApi(commands.Cog):
     async def restapi(self, ctx):
         """Test command for REST API."""
         await ctx.send("REST API up and running!")
-        await ctx.send(type(self).__module__)
+        #await ctx.send(type(self).__module__)
