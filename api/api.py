@@ -26,7 +26,7 @@ class api(commands.Cog):
 
     @commands.Cog.listener()
     async def on_reaction_add(self, reaction, user):
-        if reaction.message.id == 890366650703028305 and not reaction.me:
+        if reaction.message.id == 890366650703028305 and len(reaction.message.reactions) > 1:
             await reaction.remove(user)
             await user.send(reaction.emoji.id)
             await user.send("To verify, please complete this form: https://forms.gle/dPJnna9upwntBfMw7")
