@@ -1,10 +1,32 @@
-from redbot.core import commands
+from redbot.core import commands, tasks
+from aiohttp import web
+import aiohttp
+import os
+
+app = web.Application()
+routes = web.RouteTableDef()
 
 class api(commands.Cog):
     """My custom API cog"""
 
     def __init__(self, bot):
         self.bot = bot
+        self.web_server.start()
+
+        @routes.get('/')
+        async def welcome(request):
+            return web.Response(text="Hello, world!")
+
+    @tasks.loop()
+    async def web_server(self):
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, host='0.0.0.0', port=self.webserver_port)
+        await site.start()
+
+    @web_server.before_loop
+    async def web_server_before_loop(self):
+        await self.bot.wait_until_ready()
 
     @commands.command()
     async def apistatus(self, ctx):
