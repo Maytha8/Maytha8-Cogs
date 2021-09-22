@@ -13,8 +13,8 @@ class api(commands.Cog):
         await ctx.send("API is up and running!")
         await ctx.send(type(ctx).__module__)
 
-    @commands.Cog.listener()
-    async def on_ready(self):
+    @commands.command()
+    async def verifinit(self, ctx):
         verifmsg = self.bot.get_channel(887951332915429376).fetch_message(890366650703028305)
         await verifmsg.clear_reactions()
         await verifmsg.add_reaction('StoodVerif')
