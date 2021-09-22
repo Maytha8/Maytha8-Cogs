@@ -6,7 +6,7 @@ class RestApi(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command
+    @commands.command()
     async def restapi(self, ctx):
         """Test command for REST API."""
         await ctx.send("REST API up and running!")
