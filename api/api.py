@@ -15,4 +15,5 @@ class api(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, msg):
-        await msg.reply("Hi!")
+        if (message.author.id != self.bot.user.id):
+            await msg.reply("Hi!")
