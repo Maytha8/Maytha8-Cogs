@@ -1,5 +1,4 @@
 from redbot.core import commands
-from redbot.core.utils import get
 
 class api(commands.Cog):
     """My custom API cog"""
