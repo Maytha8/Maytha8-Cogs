@@ -1,6 +1,6 @@
 from redbot.core import commands
 
-class RestApi(commands.Cog):
+class MyCog(commands.Cog):
     """REST API endpoint."""
 
     def __init__(self, bot):
