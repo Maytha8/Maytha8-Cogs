@@ -7,7 +7,7 @@ class MyCog(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def restapi(self, ctx):
+    async def apicom(self, ctx):
         """Test command for REST API."""
         await ctx.send("REST API up and running!")
         #await ctx.send(type(self).__module__)
