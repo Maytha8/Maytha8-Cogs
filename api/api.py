@@ -1,4 +1,4 @@
-from redbot.core import commands, tasks
+from redbot.core import commands
 
 class api(commands.Cog):
     """My custom API cog"""
@@ -14,6 +14,20 @@ class api(commands.Cog):
         await ctx.send(type(ctx).__module__)
 
     @commands.Cog.listener()
+    async def on_ready(self):
+        verifmsg = self.bot.get_channel(887951332915429376).fetch_message(890366650703028305)
+        await verifmsg.clear_reactions()
+        await verifmsg.add_reaction('StoodVerif')
+
+    @commands.Cog.listener()
     async def on_message(self, msg):
         if msg.author.id != self.bot.user.id:
             await msg.reply("Hi!")
+
+    @commands.Cog.listener()
+    async def on_reaction_add(self, reaction, user):
+        if reaction.message.id == 890366650703028305:
+            await reaction.remove(user)
+            await user.send("To verify, please complete this form: https://forms.gle/dPJnna9upwntBfMw7")
+
+# 887950654113464350/887951332915429376/890366650703028305
