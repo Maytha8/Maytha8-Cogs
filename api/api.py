@@ -11,3 +11,4 @@ class api(commands.Cog):
         """Test API status!"""
         # Your code will go here
         await ctx.send("API is up and running!")
+        await ctx.send(type(self).__module__)
