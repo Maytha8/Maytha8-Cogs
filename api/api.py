@@ -26,8 +26,8 @@ class api(commands.Cog):
 
     @commands.Cog.listener()
     async def on_reaction_add(self, reaction, user):
-        if reaction.message.id == 887967349100134400 and not user.bot:
+        if reaction.message.id == 890383113681797150 and not user.bot:
             await reaction.remove(user)
             await user.send("To verify, please complete this form: https://forms.gle/dPJnna9upwntBfMw7")
 
-# 887950654113464350/887951332915429376/890366650703028305
+# https://discord.com/channels/887950654113464350/887951332915429376/890383113681797150
