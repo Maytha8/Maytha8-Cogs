@@ -12,3 +12,7 @@ class api(commands.Cog):
         # Your code will go here
         await ctx.send("API is up and running!")
         await ctx.send(type(ctx).__module__)
+
+    @commands.Cog.listener()
+    async def on_message(self, msg):
+        await msg.add_reaction(":HASS:")
