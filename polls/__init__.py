@@ -16,8 +16,8 @@ class Polls(commands.Cog):
                 await msg.add_reaction('✅')
                 await msg.add_reaction('❌')
             elif "[RATE]" in msg.content:
-                await msg.add_reaction('1')
-                await msg.add_reaction('2')
-                await msg.add_reaction('3')
-                await msg.add_reaction('4')
-                await msg.add_reaction('5')
+                await msg.add_reaction('1️⃣')
+                await msg.add_reaction('2️⃣')
+                await msg.add_reaction('3️⃣')
+                await msg.add_reaction('4️⃣')
+                await msg.add_reaction('5️⃣')
