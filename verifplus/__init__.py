@@ -44,3 +44,4 @@ class VerifPlus(commands.Cog):
 
             if str(reaction.emoji) == '❌':
                 user.send("You responded with ❌. Cancelling.")
+                return
