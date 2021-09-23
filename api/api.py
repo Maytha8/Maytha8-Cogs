@@ -13,21 +13,9 @@ class api(commands.Cog):
         await ctx.send("API is up and running!")
         await ctx.send(type(ctx).__module__)
 
-    @commands.command()
-    async def verifinit(self, ctx):
-        verifmsg = await self.bot.get_channel(887951332915429376).fetch_message(890383113681797150)
-        await verifmsg.clear_reactions()
-        await verifmsg.add_reaction('<:StoodVerif:890367558778245120>')
-
     # @commands.Cog.listener()
     # async def on_message(self, msg):
     #     if msg.author.id != self.bot.user.id:
     #         await msg.reply("Hi!")
-
-    @commands.Cog.listener()
-    async def on_reaction_add(self, reaction, user):
-        if reaction.message.id == 890383113681797150 and not user.bot:
-            await reaction.remove(user)
-            await user.send("To verify, please complete this form: https://forms.gle/dPJnna9upwntBfMw7")
 
 # https://discord.com/channels/887950654113464350/887951332915429376/890383113681797150
