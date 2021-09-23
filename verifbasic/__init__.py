@@ -9,6 +9,8 @@ class VerifBasic(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.Cog.listener()
+    async def on_ready(self):
         verifmsg = await self.bot.get_channel(887951332915429376).fetch_message(890383113681797150)
         await verifmsg.clear_reactions()
         await verifmsg.add_reaction('<:StoodVerif:890367558778245120>')
