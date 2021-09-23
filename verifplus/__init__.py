@@ -39,7 +39,7 @@ class VerifPlus(commands.Cog):
             try:
                 reaction, usr = await self.bot.wait_for("reaction_add", check=check, timeout=30)
             except asyncio.TimeoutError:
-                user.msg("You took too long to respond. Cancelling.")
+                user.send("You took too long to respond. Cancelling.")
                 return
 
             if str(reaction.emoji) == '❌':
