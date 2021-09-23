@@ -42,5 +42,5 @@ class VerifPlus(commands.Cog):
                 user.msg("You took too long to respond. Cancelling.")
                 return
 
-            if str(reaction.emoji) == ❌:
+            if str(reaction.emoji) == '❌':
                 user.msg("You responded with ❌. Cancelling.")
