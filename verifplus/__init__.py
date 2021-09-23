@@ -29,7 +29,7 @@ class VerifPlus(commands.Cog):
             )
 
             def check(reaction, usr):
-                return (usr == user and msg == reaction.message) and (str(reaction.emoji) == ✅ or str(reaction.emoji) == ❌)
+                return (usr == user and msg == reaction.message) and (str(reaction.emoji) == '✅' or str(reaction.emoji) == '❌')
 
             await user.send(embed=embed)
             msg = await user.send("Would you like to start verification?")
