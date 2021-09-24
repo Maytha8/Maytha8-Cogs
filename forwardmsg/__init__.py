@@ -28,6 +28,4 @@ class ForwardMsg(commands.Cog):
             if (reply.content.lower() == 'cancel'):
                 await self.bot.get_channel(890879683015626772).send("Cancelling.")
             else:
-                contents = reply.channel_mentions[0].contents
-                embeds = reply.channel_mentions[0].embeds
-                await reply.channel_mentions[0].send(contents, embed=embeds)
+                await reply.channel_mentions[0].send(msg.contents, embed=msg.embeds)
