@@ -25,7 +25,7 @@ class ForwardMsg(commands.Cog):
             except asyncio.TimeoutError:
                 await self.bot.get_channel(890879683015626772).send("No response. Cancelling.")
 
-            if (lower(reply.content) == 'cancel'):
+            if (reply.content.lower() == 'cancel'):
                 await self.bot.get_channel(890879683015626772).send("Cancelling.")
             else:
                 contents = reply.channel_mentions[0].contents
