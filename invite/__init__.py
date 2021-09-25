@@ -26,3 +26,4 @@ Join now! discord.gg/gpFR7sFcjC
 
 For any issues or concerns, please DM <@!406762686261624832>.
 Regards, The Stood Team.""")
+            await ctx.send(f"Sent invite to {user.mention}.")
