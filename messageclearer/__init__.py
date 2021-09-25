@@ -1,5 +1,4 @@
-import discord
-from redbot.core import commands
+from redbot.core import checks, commands
 
 def setup(bot):
     bot.add_cog(MessageClearer(bot))
