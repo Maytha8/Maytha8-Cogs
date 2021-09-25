@@ -11,7 +11,8 @@ class MessageClearer(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    @commands.requires.PrivilegeLevel(2)
+    @checks.mod_or_permissions(manage_messages=True)
+    @checks.bot_has_permissions(manage_messages=True)
     async def clear(self, ctx, amount_of_messages):
         """
         Clear <amount_of_messages> from the current channel.
