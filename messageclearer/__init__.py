@@ -26,8 +26,8 @@ class MessageClearer(commands.Cog):
             await ctx.channel.purge(limit=None)
             botmsg = await ctx.send("Deleted all messages.")
             await botmsg.delete(delay=5)
-        elif isinstance(amount_of_messages, int):
-            await ctx.channel.purge(limit=amount_of_messages)
+        elif int(amount_of_messages):
+            await ctx.channel.purge(limit=int(amount_of_messages))
             botmsg = await ctx.send(f"Deleted {amount_of_messages} messages.")
             await botmsg.delete(delay=5)
         else:
