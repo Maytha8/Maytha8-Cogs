@@ -15,4 +15,4 @@ class Ping(commands.Cog):
             if msg.channel.id == 888355679469989918:
                 await self.bot.get_channel(888355679469989918).send("> @everyone <:this:891123206457544714>")
             elif msg.channel.id == 891118316758925355:
-                await self.bot.get_channel(888355679469989918).send("> <@&891122442431524864> <:this:891123206457544714>")
+                await self.bot.get_channel(891118316758925355).send("> <@&891122442431524864> <:this:891123206457544714>")
