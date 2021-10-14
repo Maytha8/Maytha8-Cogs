@@ -29,6 +29,12 @@ class ForwardMsg(commands.Cog):
                 await self.bot.get_channel(890879683015626772).send("Cancelling.")
             else:
                 if len(msg.embeds) == 1:
-                    await reply.channel_mentions[0].send(msg.content, embed=msg.embeds[0])
+                    if len(msg.attachments) > 0:
+                        await reply.channel_mentions[0].send(msg.content, embed=msg.embeds[0], file=msg.attachments[0].to_file())
+                    else:
+                        await reply.channel_mentions[0].send(msg.content, embed=msg.embeds[0])
                 else:
-                    await reply.channel_mentions[0].send(msg.content)
+                    if len(msg.attachments) > 0:
+                        await reply.channel_mentions[0].send(msg.content, file=msg.attachments[0].to_file())
+                    else:
+                        await reply.channel_mentions[0].send(msg.content)
