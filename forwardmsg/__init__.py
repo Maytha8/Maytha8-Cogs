@@ -18,7 +18,7 @@ class ForwardMsg(commands.Cog):
             await self.bot.get_channel(890879683015626772).send("Type in which channel to forward to, or reply with 'cancel'.")
 
             def check(reply):
-                return not reply.author.bot and reply.author.name != "Stood Messages" and len(reply.channel_mentions) != 0 and reply.channel.id == 890879683015626772 and reply.channel_mentions[0].type == discord.ChannelType.text
+                return not reply.author.bot and reply.author.name != "Stood Messages" and len(reply.channel_mentions) != 0 and reply.channel.id == 890879683015626772 and (reply.channel_mentions[0].type == discord.ChannelType.text or reply.channel_mentions[0].type == discord.ChannelType.news)
 
             try:
                 reply = await self.bot.wait_for('message', timeout=20, check=check)
